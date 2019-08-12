@@ -9,6 +9,7 @@
 namespace SimpleSAML\TwigConfigurableI18n\Twig\Extensions\TokenParser;
 
 use SimpleSAML\TwigConfigurableI18n\Twig\Extensions\Node\Trans as NodeTrans;
+use Twig\Node\Node;
 use Twig\Token;
 
 class Trans extends \Twig\Extensions\TokenParser\TransTokenParser
