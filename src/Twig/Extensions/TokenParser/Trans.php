@@ -21,7 +21,7 @@ class Trans extends \Twig\Extensions\TokenParser\TransTokenParser
      *
      * @return \Twig\Node\Node A \Twig\Node\Node instance
      */
-    public function parse(Token $token): void
+    public function parse(Token $token): Node
     {
         $parsed = parent::parse($token);
         $body = $parsed->getNode('body');
