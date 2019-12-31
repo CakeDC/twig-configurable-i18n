@@ -24,14 +24,16 @@ class Trans extends \Symfony\Bridge\Twig\TokenParser\TransTokenParser
     {
         $parsed = parent::parse($token);
         $body = $parsed->getNode('body');
-        $plural = ($parsed->hasNode('plural')) ? $parsed->getNode('plural') : null;
+        $domain = $parsed->getNode('domain');
 
         /** @var \Twig\Node\Expression\AbstractExpression|null */
         $count = ($parsed->hasNode('count')) ? $parsed->getNode('count') : null;
-        $notes = ($parsed->hasNode('notes')) ? $parsed->getNode('notes') : null;
+        /** @var \Twig\Node\Expression\AbstractExpression|null */
+        $vars = ($parsed->hasNode('vars')) ? $parsed->getNode('vars') : null;
+        /** @var \Twig\Node\Expression\AbstractExpression|null */
         $locale = ($parsed->hasNode('locale')) ? $parsed->getNode('locale') : null;
 
         /** @var \Twig\Node\Node */
-        return new NodeTrans($body, $plural, $count, $notes, $locale, $parsed->getTemplateLine(), $parsed->getNodeTag());
+        return new NodeTrans($body, $domain, $count, $vars, $locale, $parsed->getTemplateLine(), $parsed->getNodeTag());
     }
 }
