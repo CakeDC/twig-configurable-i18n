@@ -1,9 +1,11 @@
 <?php
+
 /**
  * A class implementing a token parser for translation nodes.
  *
  * @author Jaime Pérez Crespo
  */
+
 namespace SimpleSAML\TwigConfigurableI18n\Twig\Extensions\TokenParser;
 
 use SimpleSAML\TwigConfigurableI18n\Twig\Extensions\Node\Trans as NodeTrans;
@@ -23,6 +25,7 @@ class Trans extends \Twig\Extensions\TokenParser\TransTokenParser
         $parsed = parent::parse($token);
         $body = $parsed->getNode('body');
         $plural = ($parsed->hasNode('plural')) ? $parsed->getNode('plural') : null;
+
         /** @var \Twig\Node\Expression\AbstractExpression|null */
         $count = ($parsed->hasNode('count')) ? $parsed->getNode('count') : null;
         $notes = ($parsed->hasNode('notes')) ? $parsed->getNode('notes') : null;
