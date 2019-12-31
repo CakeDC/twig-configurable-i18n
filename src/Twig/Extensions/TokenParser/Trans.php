@@ -11,7 +11,7 @@ namespace SimpleSAML\TwigConfigurableI18n\Twig\Extensions\TokenParser;
 use SimpleSAML\TwigConfigurableI18n\Twig\Extensions\Node\Trans as NodeTrans;
 use Twig\Token;
 
-class Trans extends \Twig\Extensions\TokenParser\TransTokenParser
+class Trans extends \Symfony\Bridge\Twig\TokenParser\TransTokenParser
 {
     /**
      * Parses a token and returns a node.

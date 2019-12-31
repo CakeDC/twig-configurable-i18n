@@ -11,7 +11,7 @@ namespace SimpleSAML\TwigConfigurableI18n\Twig\Extensions\Node;
 use ReflectionClass;
 use Twig\Compiler;
 
-class Trans extends \Twig\Extensions\Node\TransNode
+class Trans extends \Symfony\Bridge\Twig\Node\TransNode
 {
     /**
      * Compiles the node to PHP.

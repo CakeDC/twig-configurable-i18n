@@ -11,7 +11,7 @@ namespace SimpleSAML\TwigConfigurableI18n\Twig\Extensions\Extension;
 use SimpleSAML\TwigConfigurableI18n\Twig\Extensions\TokenParser\Trans;
 use Twig\TwigFilter;
 
-class I18n extends \Twig\Extensions\I18nExtension
+class I18n extends \Symfony\Bridge\Twig\Extension\TranslationExtension
 {
     /** @var array */
     protected $filters = [];
