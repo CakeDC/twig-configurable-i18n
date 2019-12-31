@@ -29,8 +29,9 @@ class Trans extends \Symfony\Bridge\Twig\TokenParser\TransTokenParser
         /** @var \Twig\Node\Expression\AbstractExpression|null */
         $count = ($parsed->hasNode('count')) ? $parsed->getNode('count') : null;
         $notes = ($parsed->hasNode('notes')) ? $parsed->getNode('notes') : null;
+        $locale = ($parsed->hasNode('locale')) ? $parsed->getNode('locale') : null;
 
         /** @var \Twig\Node\Node */
-        return new NodeTrans($body, $plural, $count, $notes, $parsed->getTemplateLine(), $parsed->getNodeTag());
+        return new NodeTrans($body, $plural, $count, $notes, $locale, $parsed->getTemplateLine(), $parsed->getNodeTag());
     }
 }
