@@ -11,6 +11,8 @@
 
 namespace SimpleSAML\TwigConfigurableI18n\Twig;
 
+use Twig\Loader\LoaderInterface;
+
 class Environment extends \Twig\Environment
 {
     /**
@@ -32,7 +34,7 @@ class Environment extends \Twig\Environment
      * @param \Twig\Loader\LoaderInterface $loader A Twig_LoaderInterface instance.
      * @param array $options An array of options.
      */
-    public function __construct(\Twig\Loader\LoaderInterface $loader, $options = [])
+    public function __construct(LoaderInterface $loader, $options = [])
     {
         parent::__construct($loader, $options);
         $this->options = $options;
@@ -44,7 +46,7 @@ class Environment extends \Twig\Environment
      *
      * @return array An array of options.
      */
-    public function getOptions()
+    public function getOptions(): array
     {
         return $this->options;
     }

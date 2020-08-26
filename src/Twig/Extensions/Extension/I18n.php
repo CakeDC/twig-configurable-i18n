@@ -37,7 +37,7 @@ class I18n extends \Twig\Extensions\I18nExtension
      *
      * @return \Twig\TokenParser\TokenParserInterface[]
      */
-    public function getTokenParsers()
+    public function getTokenParsers(): array
     {
         return [new Trans()];
     }
@@ -48,7 +48,7 @@ class I18n extends \Twig\Extensions\I18nExtension
      *
      * @return \Twig\TwigFilter[] An array of filters
      */
-    public function getFilters()
+    public function getFilters(): array
     {
         return $this->filters;
     }
@@ -61,7 +61,7 @@ class I18n extends \Twig\Extensions\I18nExtension
      *
      * @return string
      */
-    public function translateSingular()
+    public function translateSingular(): string
     {
         $singular = 'gettext';
         $args = func_get_args();
@@ -86,7 +86,7 @@ class I18n extends \Twig\Extensions\I18nExtension
      *
      * @return string
      */
-    public function translatePlural()
+    public function translatePlural(): string
     {
         $plural = 'ngettext';
         $args = func_get_args();
