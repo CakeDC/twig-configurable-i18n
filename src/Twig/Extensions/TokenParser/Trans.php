@@ -9,6 +9,7 @@
 namespace SimpleSAML\TwigConfigurableI18n\Twig\Extensions\TokenParser;
 
 use SimpleSAML\TwigConfigurableI18n\Twig\Extensions\Node\Trans as NodeTrans;
+use Twig\Node\Node;
 use Twig\Token;
 
 class Trans extends \Twig\Extensions\TokenParser\TransTokenParser
@@ -20,7 +21,7 @@ class Trans extends \Twig\Extensions\TokenParser\TransTokenParser
      *
      * @return \Twig\Node\Node A \Twig\Node\Node instance
      */
-    public function parse(Token $token): void
+    public function parse(Token $token): Node
     {
         $parsed = parent::parse($token);
         $body = $parsed->getNode('body');
