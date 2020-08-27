@@ -59,9 +59,9 @@ class I18n extends \Twig\Extensions\I18nExtension
      *
      * Defaults to gettext().
      *
-     * @return string
+     * @return string|null|false
      */
-    public function translateSingular(): string
+    public function translateSingular()
     {
         $singular = 'gettext';
         $args = func_get_args();
@@ -84,9 +84,9 @@ class I18n extends \Twig\Extensions\I18nExtension
      *
      * Defaults to ngettext().
      *
-     * @return string
+     * @return string|null|false
      */
-    public function translatePlural(): string
+    public function translatePlural()
     {
         $plural = 'ngettext';
         $args = func_get_args();
